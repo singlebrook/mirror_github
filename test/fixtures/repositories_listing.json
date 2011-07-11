@@ -1,0 +1,56 @@
+[
+  {
+    "html_url": "https://github.com/test/project_proposal_application",
+    "url": "https://api.github.com/repos/test/project_proposal_application",
+    "homepage": "",
+    "watchers": 2,
+    "language": "Ruby",
+    "clone_url": "https://github.com/test/project_proposal_application.git",
+    "git_url": "git://github.com/test/project_proposal_application.git",
+    "master_branch": null,
+    "fork": false,
+    "pushed_at": "2011-01-19T22:18:40Z",
+    "created_at": "2011-01-04T20:28:33Z",
+    "open_issues": 0,
+    "private": true,
+    "size": 380,
+    "ssh_url": "git@github.com:test/project_proposal_application.git",
+    "owner": {
+      "url": "https://api.github.com/users/test",
+      "avatar_url": "https://secure.gravatar.com/avatar/3.png",
+      "login": "test",
+      "id": 99999
+    },
+    "forks": 0,
+    "description": "An interactive proposal application for potential clients",
+    "name": "project_proposal_application",
+    "svn_url": "https://svn.github.com/test/project_proposal_application"
+  },
+  {
+    "html_url": "https://github.com/test/capistrano_drupal",
+    "url": "https://api.github.com/repos/test/capistrano_drupal",
+    "homepage": "",
+    "watchers": 4,
+    "language": "Ruby",
+    "clone_url": "https://github.com/test/capistrano_drupal.git",
+    "git_url": "git://github.com/test/capistrano_drupal.git",
+    "master_branch": null,
+    "fork": false,
+    "pushed_at": "2011-02-04T22:18:54Z",
+    "created_at": "2011-02-03T01:44:44Z",
+    "open_issues": 0,
+    "private": false,
+    "size": 156,
+    "ssh_url": "git@github.com:test/capistrano_drupal.git",
+    "owner": {
+      "url": "https://api.github.com/users/test",
+      "avatar_url": "https://secure.gravatar.com/avatar/343cbf1f96d4fe3b85.png",
+      "login": "test",
+      "id": 99999
+    },
+    "forks": 1,
+    "description": "A Capistrano deployment setup for Drupal projects.",
+    "name": "capistrano_drupal",
+    "svn_url": "https://svn.github.com/test/capistrano_drupal"
+  }
+]
