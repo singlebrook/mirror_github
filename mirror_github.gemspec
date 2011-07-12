@@ -14,7 +14,10 @@ Gem::Specification.new do |s|
   s.license     = 'BSD'
 
   s.rubyforge_project = "mirror_github"
-  s.add_development_dependency('rest-client')
+
+  s.add_dependency 'rest-client'
+
+  s.add_development_dependency 'fakerweb'
 
   s.files         = `git ls-files`.split("\n")
   s.test_files    = `git ls-files -- {test}/*`.split("\n")
