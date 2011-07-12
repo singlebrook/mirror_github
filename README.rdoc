@@ -6,15 +6,18 @@ A mirror is a bare repository that is suitable for future cloning, if necessary.
 
 == Installation
 
-This library needs the rest_client gem:
+  gem install mirror_github
 
-  gem install rest_client
+Create a mirror_github_config.yml that contains your GitHub username, password, and organization name.  There is a config_example.yml file that demonstrates the structure.  It will look something like this:
 
-every other library should be in the standard Ruby libs.
+  github:
+    username: johnnytest
+    password: sOOperSecret
+    org: my_orgs_github_account_name
 
-Clone this repo and place it in your favorite local directory.  Create a config.yml file in the root of the lib that contains your github username, password, and organization name, as well as the target directory for backups on your machine.  There is a config_example.yml file that demonstrates the structure.
+Obviously, the user credentials you define in this file need to have access to the specified organization.
 
 Then:
 
-  PATH_TO_LIB/bin/mirror_github
+  mirror_github --config-file=/path/to/your/mirror_github_config.yml --backup-dir=/path/to/github/mirror/directory
 
