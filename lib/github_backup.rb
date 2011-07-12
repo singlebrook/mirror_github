@@ -3,6 +3,8 @@ $: << File.expand_path(File.dirname(__FILE__))
 
 require 'yaml'
 require 'github_backup/configuration'
+require 'github_backup/repository'
+require 'github_backup/github'
 
 module GithubBackup
   
