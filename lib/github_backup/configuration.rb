@@ -9,7 +9,7 @@ module GithubBackup
       end
     end
 
-    attr_accessor :username, :password, :org
+    attr_accessor :username, :password, :org, :backup_directory
 
     def initialize
       load_config
@@ -22,6 +22,7 @@ module GithubBackup
       self.username = config_file['github']['username']
       self.password = config_file['github']['password']  
       self.org      = config_file['github']['org']
+      self.backup_directory = config_file['system']['backup_directory']
     end
 
   end

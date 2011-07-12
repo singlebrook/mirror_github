@@ -2,3 +2,6 @@ github:
   username: johnnytest
   password: sOOperSecret
   org: singlebrook
+
+system:
+  backup_directory: /var/backups/github
