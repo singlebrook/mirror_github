@@ -1,6 +1,6 @@
 require 'yaml'
 
-module GithubBackup
+module MirrorGithub
   class Configuration
 
     class << self
@@ -21,7 +21,7 @@ module GithubBackup
     private
 
     def load_config
-      config_file = YAML::load_file(GithubBackup::Configuration.config_file_path)
+      config_file = YAML::load_file(Configuration.config_file_path)
       self.username = config_file['github']['username']
       self.password = config_file['github']['password']  
       self.org      = config_file['github']['org']

@@ -2,8 +2,8 @@
 $: << File.expand_path(File.dirname(__FILE__))
 
 require 'rubygems'
-require 'github_backup/base'
-require 'github_backup/configuration'
-require 'github_backup/repository'
-require 'github_backup/github'
-require 'github_backup/git'
+require 'mirror_github/base'
+require 'mirror_github/configuration'
+require 'mirror_github/repository'
+require 'mirror_github/github'
+require 'mirror_github/git'

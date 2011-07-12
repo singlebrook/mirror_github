@@ -1,6 +1,6 @@
 require 'test_helper'
 
-class GithubBackup::GitTest < Test::Unit::TestCase
+class MirrorGithub::GitTest < Test::Unit::TestCase
 
   def setup
     @tmp_dir = File.expand_path(File.join(File.dirname(__FILE__), '..', 'tmp'))
@@ -8,14 +8,14 @@ class GithubBackup::GitTest < Test::Unit::TestCase
   end
 
   def test_initialize
-    r   = GithubBackup::Repository.new(:ssh_url => 'ssh://git@github.com:test')
-    git = GithubBackup::Git.new(@tmp_dir, r)
+    r   = MirrorGithub::Repository.new(:ssh_url => 'ssh://git@github.com:test')
+    git = MirrorGithub::Git.new(@tmp_dir, r)
   end
 
   def test_initialize_raises_error_if_directory_does_not_exist
-    r   = GithubBackup::Repository.new(:ssh_url => 'ssh://git@github.com:test')
+    r   = MirrorGithub::Repository.new(:ssh_url => 'ssh://git@github.com:test')
     assert_raise RuntimeError do
-      GithubBackup::Git.new('sdfl9ij390', r)
+      MirrorGithub::Git.new('sdfl9ij390', r)
     end
   end
 

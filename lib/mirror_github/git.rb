@@ -1,4 +1,4 @@
-module GithubBackup
+module MirrorGithub
 
   class Git
     attr_accessor :repository

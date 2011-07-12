@@ -1,13 +1,13 @@
-module GithubBackup
+module MirrorGithub
 
   class Base
 
     # Backs up all repositories from the organization defined in the config.
-    def backup_all
-      puts "Backing up #{github_connection.repositories.size} repositories..."
+    def mirror_all
+      puts "Mirroring #{github_connection.repositories.size} repositories..."
       github_connection.repositories.each do |repo|
         puts "Beginning #{repo.name}"
-        backup repo
+        mirror repo
         puts "Finished #{repo.name}"
         puts ""
       end
@@ -15,7 +15,7 @@ module GithubBackup
 
     # Creates a new mirroir repository at the target directory (if necessary)
     # and fetches any updates.
-    def backup(repository)
+    def mirror(repository)
       git = Git.new(config.backup_directory, repository)
       git.create_mirror unless git.mirror_exists?
       git.update_mirror

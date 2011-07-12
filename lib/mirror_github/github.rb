@@ -1,7 +1,7 @@
 require 'rest_client'
 require 'json'
 
-module GithubBackup
+module MirrorGithub
   class Github
 
     class << self
