@@ -11,14 +11,7 @@ class GithubBackup::ConfigurationTest < Test::Unit::TestCase
     config = GithubBackup::Configuration.new
     assert config.username
     assert config.password
-    assert config.type
-  end
-
-  def test_throws_error_with_invalid_user_type
-    config = GithubBackup::Configuration.new
-    assert_raise ArgumentError do
-      config.user_type = 'something weird'
-    end
+    assert config.org
   end
 
 end

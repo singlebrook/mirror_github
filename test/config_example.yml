@@ -1,4 +1,4 @@
 github:
   username: johnnytest
   password: sOOperSecret
-  user_type: organization
+  org: singlebrook

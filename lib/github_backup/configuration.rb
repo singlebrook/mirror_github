@@ -9,16 +9,10 @@ module GithubBackup
       end
     end
 
-    attr_accessor :username, :password
-    attr_reader   :type
+    attr_accessor :username, :password, :org
 
     def initialize
       load_config
-    end
-
-    def user_type=(val)
-      raise ArgumentError, "Invalid option for type, must be #{valid_org_types.join(' or ')} " unless valid_org_types.include?(val)
-      @type = val
     end
 
     private
@@ -27,11 +21,7 @@ module GithubBackup
       config_file = YAML::load_file(GithubBackup::Configuration.config_file_path)
       self.username = config_file['github']['username']
       self.password = config_file['github']['password']  
-      self.user_type = config_file['github']['user_type']  
-    end
-
-    def valid_org_types
-      %w(user organization)
+      self.org      = config_file['github']['org']
     end
 
   end
