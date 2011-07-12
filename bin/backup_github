@@ -1,0 +1,9 @@
+#!/usr/bin/env ruby
+
+lib_dir = File.join(File.dirname(__FILE__), '..', 'lib')
+$LOAD_PATH.unshift lib_dir if File.directory?(lib_dir)
+
+require 'github_backup'
+
+github_backup = GithubBackup::Base.new
+github_backup.backup_all

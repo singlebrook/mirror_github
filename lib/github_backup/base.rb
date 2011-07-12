@@ -4,10 +4,13 @@ module GithubBackup
 
     # Backs up all repositories from the organization defined in the config.
     def backup_all
-      # github_connection.repositories.each do |repo|
-      #      backup repo
-      #    end
-      backup github_connection.repositories.first
+      puts "Backing up #{github_connection.repositories.size} repositories..."
+      github_connection.repositories.each do |repo|
+        puts "Beginning #{repo.name}"
+        backup repo
+        puts "Finished #{repo.name}"
+        puts ""
+      end
     end
 
     # Creates a new mirroir repository at the target directory (if necessary)
