@@ -7,7 +7,7 @@ module GithubBackup
     # Takes a target_dir string and a Repository class
     def initialize(target_dir, repository)
       self.target_dir = target_dir
-      raise "GitHub backup directory, #{self.target_dir}, does not exist!" unless Dir.exists?(self.target_dir)
+      raise "GitHub backup directory, #{self.target_dir}, does not exist!" unless File.directory?(self.target_dir)
 
       self.repository = repository
     end

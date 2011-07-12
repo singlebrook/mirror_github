@@ -5,6 +5,7 @@ require 'yaml'
 require 'github_backup/configuration'
 require 'github_backup/repository'
 require 'github_backup/github'
+require 'github_backup/git'
 
 module GithubBackup
   
