@@ -1,4 +1,4 @@
-= Github Backup
+= Mirror Github
 
 This script will cycle through all repositories belonging to an organization and clone a mirror of them to a specified directory.
 
@@ -16,5 +16,5 @@ Clone this repo and place it in your favorite local directory.  Create a config.
 
 Then:
 
-  PATH_TO_LIB/bin/backup_github
+  PATH_TO_LIB/bin/mirror_github
 
