@@ -13,8 +13,8 @@ module GithubBackup
     # Creates a new mirroir repository at the target directory (if necessary)
     # and fetches any updates.
     def backup(repository)
-      git = Git.new(target_dir, repository)
-      git.create_mirrior unless system.mirror_exists?
+      git = Git.new(config.backup_directory, repository)
+      git.create_mirror unless git.mirror_exists?
       git.update_mirror
     end
 

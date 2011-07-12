@@ -20,12 +20,16 @@ module GithubBackup
       "cd #{target_dir}"
     end
 
+    def go_to_mirror_dir
+      "cd #{File.join(target_dir, mirror_directory)}"
+    end
+
     def mirror_directory
       "#{repository.name}.git"
     end
 
     def mirror_exists?
-      Dir.exists? File.join(target_dir, "#{mirror_directory}")
+      File.exists? File.join(target_dir, "#{mirror_directory}")
     end
 
     def target_dir
@@ -33,7 +37,7 @@ module GithubBackup
     end
 
     def update_mirror
-      `#{go_to_target_dir} && git fetch`
+      `#{go_to_mirror_dir} && git fetch`
     end
 
   end

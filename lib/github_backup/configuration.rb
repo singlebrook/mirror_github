@@ -14,6 +14,7 @@ module GithubBackup
     attr_accessor :username, :password, :org, :backup_directory
 
     def initialize
+      raise "Please create a config.yml file, see test/config_example.yml for an example." unless File.exists?(Configuration.config_file_path)
       load_config
     end
 
