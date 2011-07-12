@@ -1,1 +1,6 @@
 config.yml
+*.gem
+.bundle
+Gemfile.lock
+pkg/*
+

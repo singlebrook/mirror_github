@@ -1,6 +1,8 @@
-source :rubygems
+source "http://rubygems.org"
 
-gem 'json'
+gemspec
+
+
 gem 'rest-client'
 
 group :test do
