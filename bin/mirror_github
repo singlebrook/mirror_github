@@ -5,5 +5,5 @@ $LOAD_PATH.unshift lib_dir if File.directory?(lib_dir)
 
 require 'mirror_github'
 
-github_mirror = MirrorGithub::Base.new
+github_mirror = MirrorGithub::Base.new(ARGV)
 github_mirror.mirror_all
