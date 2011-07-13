@@ -16,6 +16,7 @@ Gem::Specification.new do |s|
   s.rubyforge_project = "mirror_github"
 
   s.add_dependency 'rest-client'
+  s.add_dependency 'json_pure'
 
   s.add_development_dependency 'fakeweb'
 
