@@ -20,9 +20,12 @@ module MirrorGithub
     end
 
     # Return a list of the current repositories for an organization
-    def repositories
+    def repositories(limit = 100000)
       return [] unless org
-      JSON::parse(connection["orgs/#{org}/repos"].get).collect do |repo_hash|
+
+      # Github defaults to paginating with 30 repos per page. This is really not what we want
+      # when we're trying to back up all of our repos!
+      JSON::parse(connection["orgs/#{org}/repos?per_page=#{limit}"].get).collect do |repo_hash|
         Repository.new(:ssh_url    => repo_hash['ssh_url'],
                        :private    => repo_hash['private'],
                        :created_at => repo_hash["created_at"],
