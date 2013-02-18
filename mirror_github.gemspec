@@ -6,8 +6,8 @@ Gem::Specification.new do |s|
   s.name        = "mirror_github"
   s.version     = MirrorGithub::VERSION
   s.platform    = Gem::Platform::RUBY
-  s.authors     = ["Casey Dreier"]
-  s.email       = ["casey.dreier@gmail.com"]
+  s.authors     = ["Casey Dreier", "Leon Miller-Out"]
+  s.email       = ["casey.dreier@gmail.com", "leon@singlebrook.com"]
   s.homepage    = "https://github.com/singlebrook/mirror_github"
   s.summary     = %q{Command-line library for mirroring an Organization's GitHub repositories}
   s.description = %q{Command-line library for mirroring an Organization's GitHub repositories}
