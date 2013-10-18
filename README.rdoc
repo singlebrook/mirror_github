@@ -17,6 +17,8 @@ Create a mirror_github_config.yml that contains your GitHub username, password, 
 
 Obviously, the user credentials you define in this file need to have access to the specified organization.
 
+Note: you can [create a personal token](https://github.com/blog/1509-personal-api-tokens) instead of using your username and password. Use it for your username and leave password blank.
+
 Then:
 
   mirror_github --config-file=/path/to/your/mirror_github_config.yml --backup-dir=/path/to/github/mirror/directory

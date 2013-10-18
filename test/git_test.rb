@@ -1,6 +1,6 @@
 require 'test_helper'
 
-class MirrorGithub::GitTest < Test::Unit::TestCase
+class MirrorGithub::GitTest < MiniTest::Unit::TestCase
 
   def setup
     @tmp_dir = File.expand_path(File.join(File.dirname(__FILE__), '..', 'tmp'))
@@ -14,7 +14,7 @@ class MirrorGithub::GitTest < Test::Unit::TestCase
 
   def test_initialize_raises_error_if_directory_does_not_exist
     r   = MirrorGithub::Repository.new(:ssh_url => 'ssh://git@github.com:test')
-    assert_raise RuntimeError do
+    assert_raises RuntimeError do
       MirrorGithub::Git.new('sdfl9ij390', r)
     end
   end

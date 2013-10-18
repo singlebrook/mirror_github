@@ -2,5 +2,5 @@
 $: << File.expand_path(File.dirname(__FILE__))
 
 require 'rubygems'
-require 'test/unit'
-require 'lib/mirror_github'
+require 'minitest/autorun'
+require 'mirror_github'

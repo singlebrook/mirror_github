@@ -1,9 +1,9 @@
 require 'test_helper'
 
-class MirrorGithub::ConfigurationTest < Test::Unit::TestCase
+class MirrorGithub::ConfigurationTest < MiniTest::Unit::TestCase
 
   def test_config_file_default
-    assert_not_nil MirrorGithub::Configuration.config_file_path
+    assert MirrorGithub::Configuration.config_file_path
   end
 
   def test_loads_config_file

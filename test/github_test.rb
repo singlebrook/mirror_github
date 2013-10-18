@@ -1,12 +1,12 @@
 require 'test_helper'
 require 'fakeweb'
 
-class MirrorGithub::GithubTest < Test::Unit::TestCase
+class MirrorGithub::GithubTest < MiniTest::Unit::TestCase
 
   def setup
     FakeWeb.allow_net_connect = false
     FakeWeb.register_uri(:get, MirrorGithub::Github.api_url, :body => "Unauthorized", :status => ["401", "Unauthorized"])
-    FakeWeb.register_uri(:get, 'https://johnnytest:sOOperSecret@api.github.com/orgs/parent_org/repos', :body => organization_json, :content_type => "application/json")
+    FakeWeb.register_uri(:get, 'https://johnnytest:sOOperSecret@api.github.com/orgs/parent_org/repos?per_page=100000', :body => organization_json, :content_type => "application/json")
   end
 
   def teardown

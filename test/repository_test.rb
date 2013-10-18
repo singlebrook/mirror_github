@@ -1,6 +1,6 @@
 require 'test_helper'
 
-class MirrorGithub::RepositoryTest < Test::Unit::TestCase
+class MirrorGithub::RepositoryTest < MiniTest::Unit::TestCase
 
   def test_initialize
     r = MirrorGithub::Repository.new(:ssh_url => "ssh_url", :private => true)

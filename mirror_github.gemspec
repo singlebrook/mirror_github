@@ -18,6 +18,8 @@ Gem::Specification.new do |s|
   s.add_dependency 'rest-client'
   s.add_dependency 'json_pure'
 
+  s.add_development_dependency 'rake'
+  s.add_development_dependency 'minitest'
   s.add_development_dependency 'fakeweb'
 
   s.files         = `git ls-files`.split("\n")
